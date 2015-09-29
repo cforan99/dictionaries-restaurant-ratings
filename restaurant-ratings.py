@@ -16,4 +16,9 @@ for line in text_file:
     name, score = restaurant_info
     restaurant_scores[name] = score
 
-print restaurant_scores
+restaurant_scores_list = restaurant_scores.items()
+
+restaurant_scores_list.sort()
+
+for name, score in restaurant_scores_list:
+    print "{} is rated at {}.".format(name, score)
